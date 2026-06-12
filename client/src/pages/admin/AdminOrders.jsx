@@ -13,7 +13,7 @@ function AdminOrders() {
     const fetchOrders = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:4000/api/orders/all",
+          `${import.meta.env.VITE_URL}/api/orders/all`,
           {
             headers: {
               Authorization: `Bearer ${accessToken}`,

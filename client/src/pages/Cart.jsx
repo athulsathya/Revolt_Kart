@@ -21,7 +21,7 @@ function Cart() {
   const totalItems =
     cart?.items?.reduce((acc, item) => acc + item.quantity, 0) || 0;
 
-  const API = "http://localhost:4000/api/cart";
+  const API = `${import.meta.env.VITE_URL}/api/cart`;
   const accessToken = localStorage.getItem("accessToken");
 
   const handleUpdateQuantity = async (productId, type) => {

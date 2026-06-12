@@ -50,7 +50,7 @@ function Login() {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:4000/api/user/login",
+        `${import.meta.env.VITE_URL}/api/user/login`,
         formData,
         {
           headers: {

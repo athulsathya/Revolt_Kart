@@ -90,11 +90,11 @@ function AdminProduct() {
       console.log("Edit Product:", editProduct);
       console.log("Product ID:", editProduct?._id);
       console.log(
-        `http://localhost:4000/api/product/update/${editProduct?._id}`,
+        `${import.meta.env.VITE_URL}/api/product/update/${editProduct?._id}`,
       );
 
       const res = await axios.put(
-        `http://localhost:4000/api/product/update/${editProduct._id}`,
+        `${import.meta.env.VITE_URL}/api/product/update/${editProduct._id}`,
         formData,
         {
           headers: {
@@ -125,7 +125,7 @@ function AdminProduct() {
         (product) => product._id !== productId,
       );
       const res = await axios.delete(
-        `http://localhost:4000/api/product/delete/${productId}`,
+        `${import.meta.env.VITE_URL}/api/product/delete/${productId}`,
         {
           headers: {
             Authorization: `Bearer ${accessToken}`,
