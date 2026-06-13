@@ -11,13 +11,14 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import ImageUpload from "@/components/ImageUpload";
 import axios from "axios";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toast } from "sonner";
 import { setProduct } from "@/redux/productSlice";
 
 function AddProduct() {
   const accessToken = localStorage.getItem("accessToken");
   const dispatch = useDispatch();
+  const { products } = useSelector((store) => store.product);
 
   const [productData, setProductData] = useState({
     productName: "",
@@ -77,7 +78,7 @@ function AddProduct() {
       );
 
       if (res.data.success) {
-        dispatch(setProduct(res.data.product));
+       dispatch(setProduct([...products, res.data.product]));
 
         toast.success("Product Added Successfully");
 
