@@ -39,6 +39,25 @@ function AdminProduct() {
   const [searchTerm, setSearchTerm] = useState("");
   const accessToken = localStorage.getItem("accessToken");
   const dispatch = useDispatch();
+  useEffect(() => {
+  const getProducts = async () => {
+    try {
+      const res = await axios.get(
+        `${import.meta.env.VITE_URL}/api/product/getallproducts`
+      );
+
+      console.log("Products API Response:", res.data);
+
+      if (res.data.success) {
+        dispatch(setProduct(res.data.products));
+      }
+    } catch (error) {
+      console.log("Admin Product Fetch Error:", error);
+    }
+  };
+
+  getProducts();
+}, [dispatch]);
   // const filteredProducts = products.filter(
   //   (product) =>
   //     product?.productName?.toLowerCase().includes(searchTerm.toLowerCase()) ||
