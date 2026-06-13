@@ -39,13 +39,24 @@ function AdminProduct() {
   const [searchTerm, setSearchTerm] = useState("");
   const accessToken = localStorage.getItem("accessToken");
   const dispatch = useDispatch();
-  const filteredProducts = products.filter(
-    (product) =>
-      product?.productName?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      product?.category?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      product?.brand?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      product?.productDesc?.toLowerCase().includes(searchTerm.toLowerCase()),
-  );
+  // const filteredProducts = products.filter(
+  //   (product) =>
+  //     product?.productName?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  //     product?.category?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  //     product?.brand?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  //     product?.productDesc?.toLowerCase().includes(searchTerm.toLowerCase()),
+  // )
+
+  const filteredProducts = Array.isArray(products)
+  ? products.filter(
+      (product) =>
+        product?.productName?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        product?.category?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        product?.brand?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        product?.productDesc?.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+  : [];
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
