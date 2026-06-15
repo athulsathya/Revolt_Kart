@@ -43,16 +43,24 @@ exports.register = async (req, res) => {
     });
 
     // creating token
-    const token = jwt.sign({ id: newUser._id }, process.env.SECRET_KEY, {
-      expiresIn: "10m",
-    });
+    const token = jwt.sign(
+      { id: newUser._id },
+      process.env.SECRET_KEY,
+      {
+        expiresIn: "10m",
+      }
+    );
 
     // save token
     newUser.token = token;
     await newUser.save();
 
+    console.log("Before verifyEmail");
+
     // send verification email
-    verifyEmail(token, email);
+    await verifyEmail(token, email);
+
+    console.log("After verifyEmail");
 
     return res.status(201).json({
       success: true,
@@ -62,7 +70,7 @@ exports.register = async (req, res) => {
   } catch (err) {
     console.log(err);
 
-    res.status(500).json({
+    return res.status(500).json({
       success: false,
       message: "Internal server error",
     });
