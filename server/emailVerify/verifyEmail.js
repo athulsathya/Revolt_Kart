@@ -3,7 +3,6 @@ require("dotenv").config();
 
 const verifyEmail = async (token, email) => {
   try {
-   
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
       port: 465,
