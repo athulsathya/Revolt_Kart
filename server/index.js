@@ -29,7 +29,7 @@ app.use("/api/cart", cartRouter);
 app.use("/api/orders", orderRoute);
 
 app.get("/", (req, res) => {
-  res.send("Welcome To MutliVendor dataBase");
+  res.send("Welcome To MutliVendor dataBase Main");
 });
 
 app.listen(process.env.PORT, () => {

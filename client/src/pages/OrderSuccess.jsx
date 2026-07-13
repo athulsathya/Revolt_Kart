@@ -8,7 +8,6 @@ function OrderSuccess() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50 flex items-center justify-center px-4">
       <div className="bg-white max-w-lg w-full rounded-3xl shadow-2xl p-10 text-center border border-green-100">
-        
         {/* Success Icon */}
         <div className="flex justify-center">
           <div className="bg-green-100 p-5 rounded-full animate-pulse">
@@ -48,8 +47,6 @@ function OrderSuccess() {
             <ShoppingBag size={18} />
             Continue Shopping
           </button>
-
-          
         </div>
 
         {/* Footer */}
