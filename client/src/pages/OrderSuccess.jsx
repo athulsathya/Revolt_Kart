@@ -49,13 +49,7 @@ function OrderSuccess() {
             Continue Shopping
           </button>
 
-          <button
-            onClick={() => navigate("/order")}
-            className="flex-1 flex items-center justify-center gap-2 border border-gray-300 hover:border-green-500 hover:text-green-600 font-semibold py-3 rounded-xl transition-all duration-300"
-          >
-            <Package size={18} />
-            View Orders
-          </button>
+          
         </div>
 
         {/* Footer */}
