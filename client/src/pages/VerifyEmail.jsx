@@ -18,7 +18,7 @@ function VerifyEmail() {
           headers: {
             Authorization: `Bearer ${token}`,
           },
-        }
+        },
       );
 
       if (res.data.success) {
@@ -43,7 +43,6 @@ function VerifyEmail() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 px-4">
       <div className="w-full max-w-md bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl border border-slate-200 p-8 sm:p-10 text-center">
-        
         {/* Icon */}
         <div className="flex justify-center mb-6">
           {status === "Email verified successfully" ? (
@@ -72,8 +71,8 @@ function VerifyEmail() {
             status === "Email verified successfully"
               ? "text-green-600"
               : status === "Verification failed. Please try again."
-              ? "text-red-600"
-              : "text-slate-600"
+                ? "text-red-600"
+                : "text-slate-600"
           }`}
         >
           {status}

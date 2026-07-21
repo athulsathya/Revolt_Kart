@@ -29,7 +29,6 @@ function SingleProduct() {
   return (
     <section className="min-h-screen bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
-        
         {/* Breadcrumb */}
         <div className="mb-6">
           <BreadCrums product={product} />
@@ -38,7 +37,6 @@ function SingleProduct() {
         {/* Product Section */}
         <div className="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-12 p-4 sm:p-6 lg:p-10">
-
             {/* Product Images */}
             <div className="w-full">
               <div className="sticky top-24">
@@ -50,7 +48,6 @@ function SingleProduct() {
             <div className="w-full">
               <ProductDesc product={product} />
             </div>
-
           </div>
         </div>
       </div>

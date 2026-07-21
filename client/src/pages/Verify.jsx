@@ -5,7 +5,6 @@ function Verify() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 px-4 py-8">
       <div className="w-full max-w-lg bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl border border-slate-200 p-6 sm:p-10 text-center">
-        
         {/* Icon */}
         <div className="flex justify-center">
           <div className="h-20 w-20 sm:h-24 sm:w-24 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center shadow-lg">
@@ -20,16 +19,14 @@ function Verify() {
 
         {/* Description */}
         <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed max-w-md mx-auto">
-          We've sent a verification link to your email address. Please
-          check your inbox and click the link to activate your account and
-          continue using our platform.
+          We've sent a verification link to your email address. Please check
+          your inbox and click the link to activate your account and continue
+          using our platform.
         </p>
 
         {/* Info Box */}
         <div className="mt-8 rounded-2xl bg-slate-50 border border-slate-200 p-5">
-          <p className="text-sm text-slate-500">
-            Didn't receive the email?
-          </p>
+          <p className="text-sm text-slate-500">Didn't receive the email?</p>
 
           <button className="mt-3 inline-flex items-center gap-2 font-semibold text-blue-600 hover:text-blue-700 transition">
             <RefreshCw size={16} />
@@ -54,8 +51,8 @@ function Verify() {
 
         {/* Footer */}
         <p className="mt-6 text-xs text-slate-400">
-          If the email doesn't appear within a few minutes, check your spam
-          or promotions folder.
+          If the email doesn't appear within a few minutes, check your spam or
+          promotions folder.
         </p>
       </div>
     </div>

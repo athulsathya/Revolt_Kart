@@ -20,9 +20,7 @@ function Footer() {
         <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-5">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold">
-                Stay Updated
-              </h2>
+              <h2 className="text-2xl md:text-3xl font-bold">Stay Updated</h2>
 
               <p className="text-slate-400 mt-2 text-sm md:text-base">
                 Get new arrivals, exclusive offers and marketplace updates.
@@ -60,8 +58,8 @@ function Footer() {
             </div>
 
             <p className="text-slate-400 text-sm leading-6 mt-4">
-              Modern multi-vendor marketplace connecting customers with
-              trusted sellers and quality products.
+              Modern multi-vendor marketplace connecting customers with trusted
+              sellers and quality products.
             </p>
 
             <div className="flex gap-3 mt-5">
@@ -73,7 +71,7 @@ function Footer() {
                   >
                     <Icon size={14} />
                   </div>
-                )
+                ),
               )}
             </div>
           </div>
@@ -95,10 +93,7 @@ function Footer() {
                 Vendors
               </Link>
 
-              <Link
-                to="/new-arrivals"
-                className="hover:text-white transition"
-              >
+              <Link to="/new-arrivals" className="hover:text-white transition">
                 New Arrivals
               </Link>
             </div>

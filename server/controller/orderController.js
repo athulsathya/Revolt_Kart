@@ -3,6 +3,7 @@ const Order = require("../Model/orderModel");
 const crypto = require("crypto");
 const Cart = require("../Model/cartModel");
 
+// orderCreating
 exports.createOrder = async (req, res) => {
   try {
     const { products, amount, tax, shipping, currency } = req.body;
@@ -34,6 +35,7 @@ exports.createOrder = async (req, res) => {
   }
 };
 
+// paymentVerifying
 exports.verifyPayment = async (req, res) => {
   try {
     const {
@@ -93,6 +95,7 @@ exports.verifyPayment = async (req, res) => {
   }
 };
 
+// getting orders
 exports.getMyOrder = async (req, res) => {
   try {
     const userId = req.id;
@@ -117,7 +120,6 @@ exports.getMyOrder = async (req, res) => {
 //admin only
 exports.getUserOrder = async (req, res) => {
   try {
-    
     const { userId } = req.params;
     console.log("userId:", userId);
     const orders = await Order.find({ user: userId })
@@ -133,6 +135,7 @@ exports.getUserOrder = async (req, res) => {
   }
 };
 
+// getting admin orders
 exports.getAllOrderAdmin = async (req, res) => {
   try {
     const orders = await Order.find()
@@ -147,20 +150,10 @@ exports.getAllOrderAdmin = async (req, res) => {
     });
   } catch (error) {
     console.log(error);
-    res
-      .status(500)
-      .json({
-        success: false,
-        message: "Failed to fetch all orders",
-        error: error.message,
-      });
+    res.status(500).json({
+      success: false,
+      message: "Failed to fetch all orders",
+      error: error.message,
+    });
   }
 };
-
-// exports.getSalesData=async(req,res)=>{
-//   try {
-    
-//   } catch (error) {
-    
-//   }
-// }

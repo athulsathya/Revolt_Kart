@@ -128,7 +128,7 @@ function AddressForm() {
         },
 
         handler: async function (response) {
-        console.log("Payment Response:", response);
+          console.log("Payment Response:", response);
           try {
             const verifyRes = await axios.post(
               `${import.meta.env.VITE_URL}/api/orders/verify-payment`,

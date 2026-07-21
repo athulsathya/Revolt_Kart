@@ -2,6 +2,7 @@ const Product = require("../Model/productModel");
 const cloudinary = require("../utils/cloudinary");
 const getDataUri = require("../utils/dataUri");
 
+// product Adding
 exports.addProduct = async (req, res) => {
   try {
     const { productName, productDesc, productPrice, category, brand } =
@@ -55,6 +56,7 @@ exports.addProduct = async (req, res) => {
   }
 };
 
+// getting all products
 exports.getAllProduct = async (req, res) => {
   try {
     const products = await Product.find();
@@ -70,6 +72,7 @@ exports.getAllProduct = async (req, res) => {
   }
 };
 
+// deleting products
 exports.deleProduct = async (req, res) => {
   try {
     const { productId } = req.params;
@@ -96,6 +99,7 @@ exports.deleProduct = async (req, res) => {
   }
 };
 
+// updating products
 exports.updateProduct = async (req, res) => {
   try {
     const { productId } = req.params;

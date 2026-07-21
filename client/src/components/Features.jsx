@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  Store,
-  ShieldCheck,
-  Truck,
-  Headphones,
-} from "lucide-react";
+import { Store, ShieldCheck, Truck, Headphones } from "lucide-react";
 
 function Features() {
   const features = [
@@ -48,8 +43,8 @@ function Features() {
           </h2>
 
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-            Enjoy a seamless shopping experience with trusted vendors,
-            secure payments, fast delivery, and dedicated customer support.
+            Enjoy a seamless shopping experience with trusted vendors, secure
+            payments, fast delivery, and dedicated customer support.
           </p>
         </div>
 
@@ -64,13 +59,9 @@ function Features() {
                 {feature.icon}
               </div>
 
-              <h3 className="text-xl font-semibold mb-3">
-                {feature.title}
-              </h3>
+              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
 
-              <p className="text-gray-600">
-                {feature.description}
-              </p>
+              <p className="text-gray-600">{feature.description}</p>
             </div>
           ))}
         </div>

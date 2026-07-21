@@ -43,13 +43,9 @@ exports.register = async (req, res) => {
     });
 
     // creating token
-    const token = jwt.sign(
-      { id: newUser._id },
-      process.env.SECRET_KEY,
-      {
-        expiresIn: "10m",
-      }
-    );
+    const token = jwt.sign({ id: newUser._id }, process.env.SECRET_KEY, {
+      expiresIn: "10m",
+    });
 
     // save token
     newUser.token = token;
@@ -513,9 +509,6 @@ exports.updateUser = async (req, res) => {
     let profilePicUrl = user.profilePic;
     let profilePicPublicId = user.profilePicPublicId;
 
-    // ===============================
-    // CLOUDINARY UPLOAD FIXED
-    // ===============================
     if (req.file) {
       try {
         // delete old image
@@ -548,9 +541,8 @@ exports.updateUser = async (req, res) => {
       }
     }
 
-    // ===============================
     // UPDATE FIELDS
-    // ===============================
+
     user.firstname = firstname || user.firstname;
     user.lastname = lastname || user.lastname;
     user.address = address || user.address;

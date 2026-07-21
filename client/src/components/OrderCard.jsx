@@ -3,9 +3,8 @@ import { Button } from "./ui/button";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-
-function OrderCard({userOrder}) {
-     const navigate = useNavigate();
+function OrderCard({ userOrder }) {
+  const navigate = useNavigate();
   return (
     <div>
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-8 px-4 sm:px-6">

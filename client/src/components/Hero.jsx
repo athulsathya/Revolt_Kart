@@ -14,9 +14,7 @@ function Hero() {
 
             <h1 className="text-5xl md:text-6xl font-bold leading-tight text-gray-900">
               Latest Electronics
-              <span className="block text-gray-600">
-                At The Best Prices
-              </span>
+              <span className="block text-gray-600">At The Best Prices</span>
             </h1>
 
             <p className="text-lg text-gray-600 max-w-lg">
@@ -30,10 +28,7 @@ function Hero() {
                 Shop Now
               </Button>
 
-              <Button
-                variant="outline"
-                className="px-8 py-6 text-lg border-2"
-              >
+              <Button variant="outline" className="px-8 py-6 text-lg border-2">
                 View Deals
               </Button>
             </div>
@@ -69,9 +64,7 @@ function Hero() {
             <div className="absolute bottom-6 left-6 bg-white p-4 rounded-xl shadow-lg">
               <p className="text-sm text-gray-500">Today's Deal</p>
               <h3 className="font-bold text-lg">Up to 50% Off</h3>
-              <p className="text-sm text-gray-600">
-                Electronics & Accessories
-              </p>
+              <p className="text-sm text-gray-600">Electronics & Accessories</p>
             </div>
           </div>
         </div>

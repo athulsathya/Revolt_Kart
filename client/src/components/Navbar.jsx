@@ -30,7 +30,7 @@ function Navbar() {
           headers: {
             Authorization: `Bearer ${accessToken}`,
           },
-        }
+        },
       );
 
       if (res.data.success) {
@@ -53,9 +53,7 @@ function Navbar() {
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-6">
-
         <div className="flex items-center justify-between h-16">
-
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
             <img
@@ -74,10 +72,7 @@ function Navbar() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link
-              to="/"
-              className="text-gray-600 hover:text-black font-medium"
-            >
+            <Link to="/" className="text-gray-600 hover:text-black font-medium">
               Home
             </Link>
 
@@ -109,7 +104,6 @@ function Navbar() {
 
           {/* Right Section */}
           <div className="flex items-center gap-3">
-
             {/* Cart */}
             <Link
               to="/cart"
@@ -147,14 +141,12 @@ function Navbar() {
             >
               {menuOpen ? <X /> : <Menu />}
             </button>
-
           </div>
         </div>
 
         {/* Mobile Menu */}
         {menuOpen && (
           <div className="md:hidden flex flex-col gap-4 py-4 border-t bg-white">
-
             <Link to="/" onClick={() => setMenuOpen(false)}>
               Home
             </Link>
@@ -173,10 +165,7 @@ function Navbar() {
             )}
 
             {admin && (
-              <Link
-                to="/dashboard/sales"
-                onClick={() => setMenuOpen(false)}
-              >
+              <Link to="/dashboard/sales" onClick={() => setMenuOpen(false)}>
                 Dashboard
               </Link>
             )}
@@ -194,14 +183,11 @@ function Navbar() {
               </Button>
             ) : (
               <Link to="/login" onClick={() => setMenuOpen(false)}>
-                <Button className="bg-black text-white w-full">
-                  Login
-                </Button>
+                <Button className="bg-black text-white w-full">Login</Button>
               </Link>
             )}
           </div>
         )}
-
       </div>
     </header>
   );

@@ -26,9 +26,7 @@ function ImageUpload({ productData, setProductData }) {
     setProductData((prev) => ({
       ...prev,
       productImg:
-        prev?.productImg?.filter(
-          (_, index) => index !== indexToRemove
-        ) || [],
+        prev?.productImg?.filter((_, index) => index !== indexToRemove) || [],
     }));
   };
 
@@ -41,9 +39,7 @@ function ImageUpload({ productData, setProductData }) {
 
   return (
     <div className="space-y-4">
-      <Label className="font-medium text-slate-700">
-        Product Images
-      </Label>
+      <Label className="font-medium text-slate-700">Product Images</Label>
 
       <Input
         type="file"
@@ -76,11 +72,7 @@ function ImageUpload({ productData, setProductData }) {
               {productData.productImg.length} image(s) selected
             </p>
 
-            <Button
-              type="button"
-              variant="outline"
-              onClick={clearAllImages}
-            >
+            <Button type="button" variant="outline" onClick={clearAllImages}>
               Clear All
             </Button>
           </div>
@@ -120,9 +112,7 @@ function ImageUpload({ productData, setProductData }) {
                     </button>
 
                     <div className="p-2 text-xs text-center text-slate-500 truncate">
-                      {file instanceof File
-                        ? file.name
-                        : `Image ${idx + 1}`}
+                      {file instanceof File ? file.name : `Image ${idx + 1}`}
                     </div>
                   </CardContent>
                 </Card>
